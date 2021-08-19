@@ -25,30 +25,29 @@ mongoose.connect(DB_URL, {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(Log("dev"));
-if(NODE_ENV === "development") {
-  app.use(cors({
-    credentials: true,
-    origin: [
-      "http://localhost:3000",
-      "https://princecee-portfolio.herokuapp.com"
-    ],
-    methods: [
-      "POST",
-      "GET",
-      "OPTIONS",
-      "PUT",
-      "UPDATE",
-      "DELETE"
-    ],
-    allowedHeaders: [
-      "X-Requested-With",
-      "X-HTTP-Method-Override",
-      "Content-Type",
-      "Accept",
-      "Authorization"
-    ]
-  }));
-}
+app.use(cors({
+  // credentials: true,
+  origin: [
+    "http://localhost:3000",
+    "https://princecee-portfolio.herokuapp.com/"
+  ],
+  methods: [
+    "POST",
+    "GET",
+    "OPTIONS",
+    "PUT",
+    "UPDATE",
+    "DELETE"
+  ],
+  allowedHeaders: [
+    "X-Requested-With",
+    "X-HTTP-Method-Override",
+    "Content-Type",
+    "Accept",
+    "Authorization"
+  ]
+}));
+
 
 // process the contact form
 // @ts-ignore
