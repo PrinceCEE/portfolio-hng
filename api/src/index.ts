@@ -29,7 +29,8 @@ app.use(cors({
   // credentials: true,
   origin: [
     "http://localhost:3000",
-    "https://princecee-portfolio.herokuapp.com"
+    "https://princecee-portfolio.herokuapp.com",
+    "http://princecee-portfolio.herokuapp.com",
   ],
   methods: [
     "POST",
