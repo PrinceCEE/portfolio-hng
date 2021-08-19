@@ -30,6 +30,7 @@ if(NODE_ENV === "development") {
     credentials: true,
     origin: [
       "http://localhost:3000",
+      "https://princecee-portfolio.herokuapp.com"
     ],
     methods: [
       "POST",
