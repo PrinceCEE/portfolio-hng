@@ -499,7 +499,7 @@ const Home: NextPage = () => {
                       }}
                       onSubmit={async (values, { setSubmitting, resetForm }) => {
                         try {
-                          const response = await axios.post("http://localhost:3002/contact", {...values});
+                          const response = await axios.post("https://princecee-portfolio-api.herokuapp.com/contact", {...values});
                           alert(response.data.data);
                         } catch(err) {
                           let errMessage: string;
